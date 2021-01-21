@@ -53,6 +53,8 @@ Added:
   - suiteVersion: string | "" (empty string)
 - device-connect
   - isBitcoinOnly: boolean
+- accounts/empty-account/buy
+  - network: string 
   
 ### 1.5
 Added:
