@@ -13,6 +13,7 @@ const validChannels = [
     'oauth/response',
 
     // Update events
+    'update/enable',
     'update/checking',
     'update/available',
     'update/not-available',
@@ -44,11 +45,13 @@ contextBridge.exposeInMainWorld('desktopApi', {
     },
     on: (channel: string, func: (...args: any[]) => any) => {
         if (validChannels.includes(channel)) {
+            console.log('on', channel);
             ipcRenderer.on(channel, (_, ...args) => func(...args));
         }
     },
     once: (channel: string, func: (...args: any[]) => any) => {
         if (validChannels.includes(channel)) {
+            console.log('once', channel);
             ipcRenderer.once(channel, (_, ...args) => func(...args));
         }
     },

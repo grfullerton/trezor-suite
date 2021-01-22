@@ -1,7 +1,7 @@
 import { Menu } from 'electron';
 
-import { buildMainMenu, inputMenu, selectionMenu } from '@lib/menu';
-import { b2t } from '@lib/utils';
+import { buildMainMenu, inputMenu, selectionMenu } from '@desktop-electron/libs/menu';
+import { b2t } from '@desktop-electron/libs/utils';
 
 const init = ({ mainWindow }: Dependencies) => {
     const { logger } = global;

@@ -1,5 +1,5 @@
 import isDev from 'electron-is-dev';
-import { MODULES } from '@lib/constants';
+import { MODULES } from '@desktop-electron/libs/constants';
 
 const modules = async (dependencies: Dependencies) => {
     const { logger } = global;
